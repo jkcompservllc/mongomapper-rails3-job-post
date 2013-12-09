@@ -1,0 +1,16 @@
+<%=form_for @job do |f|%>
+    <%= f.error_messages %>
+  <p>Title: <%=f.text_field :title%></p>  
+  <p>Employer: <%=f.select :employer_id, Employer.all.collect{|a| [a.name,a.id]}%></p>
+    <!--   http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html
+    text_field, telephone_field, url_field
+    -->
+    <p>Job Description: <%=f.text_field :job_description%></p>
+    <p>Pay: <%=f.number_field :pay%></p>
+      <p>Minimum Age: <%=f.number_field :age%></p>
+    <p>Required Experience: <%=f.text_field :required_experience%></p>
+    <p>Hours Needed: <%=f.text_field :hours_needed%></p>
+    <p>Benefits: <%=f.text_field :benefits%></p>
+    <p><%=f.submit :Save%></p>
+<%end%>
+

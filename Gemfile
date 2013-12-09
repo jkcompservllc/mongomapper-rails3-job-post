@@ -1,0 +1,6 @@
+source 'http://rubygems.org'
+gem 'rails', '3.2.9'
+gem 'mongo_mapper'
+gem 'mongo'
+gem 'bson_ext'
+gem 'devise'

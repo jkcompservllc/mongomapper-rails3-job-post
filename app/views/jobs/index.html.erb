@@ -1,0 +1,9 @@
+<h2>All jobs</h2>
+
+<ul>
+<%@jobs.each do |job|%>
+  <li><%=job.title%> (<%=job.employer.name%>) | <%=link_to "Edit", edit_job_url(job)%> | <%=link_to "Delete", job_url(job), :method => :delete%></li>
+<%end%>
+</ul>
+
+<%=link_to "Add a new job", new_job_url%>

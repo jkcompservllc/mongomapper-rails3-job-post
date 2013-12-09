@@ -1,0 +1,9 @@
+<h2>All employers</h2>
+
+<ul>
+<%@employers.each do |employer|%>
+  <li><%=employer.name%> (<%=pluralize(employer.jobs.count,"job")%>) | <%=link_to "Edit", edit_employer_url(employer)%></li>
+<%end%>
+</ul>
+
+<%=link_to "Add a new employer", new_employer_url%>

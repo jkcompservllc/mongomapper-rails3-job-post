@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>StephanieMongoDBJobPost</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :defaults %>
+  <%= javascript_include_tag "rails" %>
+  <!--The following line allows the job delete to work for the link_to command.
+  I could also use button_to to get the delete to work without this line
+  See: http://stackoverflow.com/questions/4342083/rails-3-link-to-method-delete-not-working-->
+    <%= javascript_include_tag :all %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+  <h1>Stephanie MongoDB Job Post</h1>
+  <p>Menu: <%=link_to "Manage Employers", employers_url%> | <%=link_to "Manage jobs", jobs_url%></p>
+  <hr />
+  <%if flash[:notice]%><div class='notice'><%=flash[:notice]%></div><%end%>
+  <%= yield %>
+
+</body>
+</html>
